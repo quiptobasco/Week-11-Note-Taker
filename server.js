@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
-const { customAlphabet } = require('nanoid');
-const nanoid = customAlphabet('0123456789', 3);
+const { nanoid } = require('nanoid');
 const { readFromFile, readAndAppend, readAndDelete } = require('./helpers/fsUtils');
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -25,9 +25,9 @@ app.get('/api/notes', (req, res) =>
 );
 
 app.post('/api/notes', (req, res) => {
-    console.info(`${req.method} request received to add a note`);
-
     const { title, text } = req.body;
+
+    console.info(`${req.method} request received to add a note`);
 
     if (req.body) {
         const newNote = {
@@ -42,9 +42,9 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    console.info(`${req.method} request received to delete a note with id of ${req.params.id}`);
-
     const noteId = req.params.id;
+
+    console.info(`${req.method} request received to delete a note with id of ${req.params.id}`);
     
     readAndDelete('./db/db.json', noteId);
     res.json();
