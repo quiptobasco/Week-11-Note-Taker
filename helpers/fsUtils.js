@@ -29,7 +29,7 @@ const readAndDelete = (file, id) => {
             var filteredData = parsedData.filter(e => e.id !== id);
             writeToFile(file, filteredData);
         }
-    })
+    });
 };
 
 module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete };
