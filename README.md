@@ -12,6 +12,8 @@
 ## Description
 A project that uses an Express.js backend to create and display notes.
 
+[HEROKU deployment](https://thawing-beach-36293.herokuapp.com/).
+
 ![screenshot](https://user-images.githubusercontent.com/87678391/137608198-1f084211-08ab-43af-8606-2315539cd704.png)
 
 ![screenshot1](https://user-images.githubusercontent.com/87678391/137608202-b77be6c7-380e-4b8f-88f1-d2c18a889702.png)
